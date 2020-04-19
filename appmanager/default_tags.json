@@ -1,32 +1,8 @@
 {
     "tags": [
         {
-            "name": "游戏",
-            "pinyin": "youxi"
-        },
-        {
-            "name": "影音",
-            "pinyin": "yingyin"
-        },
-        {
-            "name": "视频",
-            "pinyin": "shipin"
-        },
-        {
-            "name": "音乐",
-            "pinyin": "yinyue"
-        },
-        {
-            "name": "文件",
-            "pinyin": "wenjian"
-        },
-        {
-            "name": "照片",
-            "pinyin": "zhaopian"
-        },
-        {
-            "name": "播放器",
-            "pinyin": "bofangqi"
+            "name": "个人所得税",
+            "pinyin": "gerensuodeshui"
         }
     ],
     "update_time": 1585667404534,
