@@ -27,8 +27,12 @@
         {
             "name": "播放器",
             "pinyin": "bofangqi"
+        },
+        {
+            "name": "学习",
+            "pinyin": "xuexi"
         }
     ],
-    "update_time": 1585667404534,
+    "update_time": 1587627711000,
     "expire_time": 86400000
 }
