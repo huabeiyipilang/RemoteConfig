@@ -1,0 +1,34 @@
+{
+    "scheme_list":[
+        {
+            "title":"投稿播放页",
+            "scheme":"sinaweibo://videoplaylist?mid=4534234432148609&oid=1034:4534230697312271&sceneid=y_operate_0&log_ext=analysis_card%3Apage_info%7Crootmid%3A4534234432148609%7Cfirst_level_channel_id%3A4379155794457909%7Cis_contribution%3A1%7Cmid%3A4534234432148609%7Cvideo_orientation%3Ahorizontal%7Cindex%3A3%7Csecond_level_channels%3A4411014058590154%7Cauthorid%3A1288739185%7Crootuid%3A1288739185%7Cuuid%3A4534233380159521%7Cuid%3A1890380215%7Cisfan%3A0%7Cobject_duration%3A721.536%7Cis_album%3A1%7Cthird_vid%3A%7Csceneid%3Ay_operate_0%7Cfrom%3A1%7Cdetail%3Anative%7Cobjectid%3A1034%253A4534230697312271%7Cmiduid%3A1288739185",
+            "desc":""
+        },
+        {
+            "title":"全屏播放页",
+            "scheme":"sinaweibo://videoplayer?url=http%3a%2f%2fgslb.miaopai.com%2fstream%2fFv-u1I2xMyQoYHCEWkxNvsWBFsQwltuZEHSOCA__.mp4%3fyx%3d%26refer%3dweibo_app%26mpflag%3d32%26mpr%3d1505317710%26Expires%3d1505794077%26ssig%3d6qSXGW3NjS%26KID%3dunistore%2cvideo&oid:2017607%3ac63178c1521f19a464a85d0453f0f8f4",
+            "desc":""
+        },
+        {
+            "title":"观看历史页",
+            "scheme":"sinaweibo://videohistory",
+            "desc":""
+        },
+        {
+            "title":"离线缓存页",
+            "scheme":"sinaweibo://videocache",
+            "desc":""
+        },
+        {
+            "title":"稍后观看页",
+            "scheme":"sinaweibo://videolater",
+            "desc":""
+        },
+        {
+            "title":"视频管理页",
+            "scheme":"sinaweibo://video/manage",
+            "desc":""
+        }
+    ]
+}
