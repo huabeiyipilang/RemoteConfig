@@ -1,0 +1,202 @@
+{
+    "select_id": "231643_888",
+    "menu_scheme": "",
+    "show_video_manager": 1,
+    "show_menu": false,
+    "vchannel_enable": 1,
+    "vchannel_small_video_to_vchannel_player": 1,
+    "vchannel_short_video_to_vchannel_player": 1,
+    "vchannel_container_id_in_tab": "231643_11_5011",
+    "vchannel_container_id_user": "231643_11_5012",
+    "channel_list": [
+        {
+            "memorize_available": true,
+            "extension": {
+                "video_search": {
+                    "scheme": "sinaweibo:\/\/searchall?type=402&containerid=231729",
+                    "tip": "搜你想看的视频"
+                },
+                "theme": {
+                    "normal_color": "#333333"
+                },
+                "button_configs_right": [
+                    {
+                        "ext": "type:center",
+                        "icon_dark": "https:\/\/h5.sinaimg.cn\/upload\/1010\/1352\/2020\/09\/22\/video_icon_manage_dark.png",
+                        "scheme": "sinaweibo:\/\/myvideo",
+                        "icon": "https:\/\/h5.sinaimg.cn\/upload\/1010\/1352\/2020\/09\/22\/video_icon_manage.png",
+                        "is_support_visitor": false,
+                        "mold": 2,
+                        "position": 1,
+                        "act_code": 3275,
+                        "version": 2,
+                        "timeout": 300,
+                        "exception_text": "请求超时了..."
+                    }
+                ],
+                "button_configs_left": [
+                    {
+                        "icon_dark": "https:\/\/h5.sinaimg.cn\/upload\/1019\/115\/2020\/05\/29\/NavigationBar_Video_Icon_Live_Dark.png",
+                        "scheme": "sinaweibo:\/\/livesquaretabbar?containerid=2310750001",
+                        "icon": "https:\/\/h5.sinaimg.cn\/upload\/1019\/115\/2020\/05\/29\/NavigationBar_Video_Icon_Live_Normal.png",
+                        "is_support_visitor": true,
+                        "mold": 1,
+                        "position": 1,
+                        "act_code": 4675,
+                        "version": 1,
+                        "timeout": 3000,
+                        "url": "http:\/\/api.weibo.cn\/2\/!\/multimedia\/video\/tab\/top_button_config",
+                        "exception_text": "请求超时了..."
+                    }
+                ]
+            },
+            "scheme": "sinaweibo:\/\/cardlist?containerid=231643_888",
+            "autorefresh_interval": "30",
+            "sub_channels": [],
+            "autoclearcache_interval": "30",
+            "name": "推荐",
+            "default_add": "1",
+            "containerid": "231643_888",
+            "type": "video_timeline",
+            "must_show": "0",
+            "actionlog": {
+                "act_code": "2523",
+                "fid": "231643_888"
+            }
+        },
+        {
+            "memorize_available": false,
+            "extension": {
+                "video_search": {
+                    "scheme": "sinaweibo:\/\/searchall?type=402&containerid=231729",
+                    "tip": "搜你想看的视频"
+                },
+                "theme": {
+                    "normal_color": "#333333"
+                },
+                "button_configs_right": [
+                    {
+                        "ext": "type:center",
+                        "icon_dark": "https:\/\/h5.sinaimg.cn\/upload\/1010\/1352\/2020\/09\/22\/video_icon_manage_dark.png",
+                        "scheme": "sinaweibo:\/\/myvideo",
+                        "icon": "https:\/\/h5.sinaimg.cn\/upload\/1010\/1352\/2020\/09\/22\/video_icon_manage.png",
+                        "is_support_visitor": false,
+                        "mold": 2,
+                        "position": 1,
+                        "act_code": 3275,
+                        "version": 2,
+                        "timeout": 300,
+                        "exception_text": "请求超时了..."
+                    }
+                ],
+                "button_configs_left": [
+                    {
+                        "icon_dark": "https:\/\/h5.sinaimg.cn\/upload\/1019\/115\/2020\/05\/29\/NavigationBar_Video_Icon_Live_Dark.png",
+                        "scheme": "sinaweibo:\/\/livesquaretabbar?containerid=2310750001",
+                        "icon": "https:\/\/h5.sinaimg.cn\/upload\/1019\/115\/2020\/05\/29\/NavigationBar_Video_Icon_Live_Normal.png",
+                        "is_support_visitor": true,
+                        "mold": 1,
+                        "position": 1,
+                        "act_code": 4675,
+                        "version": 1,
+                        "timeout": 3000,
+                        "url": "http:\/\/api.weibo.cn\/2\/!\/multimedia\/video\/tab\/top_button_config",
+                        "exception_text": "请求超时了..."
+                    }
+                ]
+            },
+            "scheme": "sinaweibo:\/\/cardlist?containerid=231643_10_4471887192653825",
+            "autorefresh_interval": "30",
+            "sub_channels": [],
+            "autoclearcache_interval": "30",
+            "name": "热门",
+            "default_add": "1",
+            "containerid": "231643_10_4471887192653825",
+            "type": "video",
+            "must_show": "0",
+            "actionlog": {
+                "act_code": "2523",
+                "fid": "231643_10_4471887192653825"
+            }
+        },
+        {
+            "memorize_available": true,
+            "extension": {
+                "theme": {
+                    "normal_color": "#333333"
+                },
+                "button_configs_right": [
+                    {
+                        "ext": "type:input",
+                        "is_check_pull_fresh": true,
+                        "icon_dark": "https:\/\/h5.sinaimg.cn\/upload\/1010\/1352\/2020\/09\/22\/svideo_navigationbar_icon_search.png",
+                        "scheme": "sinaweibo:\/\/searchall?type=402&containerid=231729",
+                        "is_support_visitor": true,
+                        "mold": 3,
+                        "act_code": 3275,
+                        "is_check_download": false,
+                        "version": 2,
+                        "timeout": 300,
+                        "exception_text": "请求超时了...",
+                        "android_scheme": "sinaweibo:\/\/searchvideo",
+                        "position": 1
+                    }
+                ],
+                "win_model": 1,
+                "button_configs_left": [
+                    {
+                        "icon_dark": "https:\/\/h5.sinaimg.cn\/upload\/1019\/115\/2020\/05\/29\/NavigationBar_Video_Icon_Live_Dark.png",
+                        "scheme": "sinaweibo:\/\/livesquaretabbar?containerid=2310750001",
+                        "icon": "https:\/\/h5.sinaimg.cn\/upload\/1019\/115\/2020\/05\/29\/NavigationBar_Video_Icon_Live_Normal.png",
+                        "is_support_visitor": true,
+                        "mold": 1,
+                        "position": 1,
+                        "act_code": 4675,
+                        "version": 1,
+                        "timeout": 3000,
+                        "url": "http:\/\/api.weibo.cn\/2\/!\/multimedia\/video\/tab\/top_button_config",
+                        "exception_text": "请求超时了..."
+                    }
+                ]
+            },
+            "scheme": "sinaweibo:\/\/cardlist?containerid=231557_3",
+            "autorefresh_interval": "30",
+            "sub_channels": [],
+            "name": "小视频",
+            "default_add": "1",
+            "containerid": "231557_3",
+            "type": "tiny_smallvideo",
+            "must_show": "0",
+            "actionlog": {
+                "act_code": "2523",
+                "fid": "231557_3"
+            }
+        }
+    ],
+    "button_configs": [
+        {
+            "icon_dark": "https:\/\/h5.sinaimg.cn\/upload\/1019\/115\/2020\/05\/29\/NavigationBar_Video_Icon_Live_Dark.png",
+            "scheme": "sinaweibo:\/\/livesquaretabbar?containerid=2310750001",
+            "icon": "https:\/\/h5.sinaimg.cn\/upload\/1019\/115\/2020\/05\/29\/NavigationBar_Video_Icon_Live_Normal.png",
+            "is_support_visitor": true,
+            "mold": 1,
+            "position": 1,
+            "act_code": 4675,
+            "version": 1,
+            "timeout": 3000,
+            "url": "http:\/\/api.weibo.cn\/2\/!\/multimedia\/video\/tab\/top_button_config",
+            "exception_text": "请求超时了..."
+        }
+    ],
+    "share_menu_list": [
+        {
+            "name": "刷新",
+            "type": "button_menus_refresh"
+        },
+        {
+            "name": "返回首页",
+            "type": "gohome",
+            "params": "\"scheme\": \"sinaweibo:\/\/gotohome\""
+        }
+    ]
+}
