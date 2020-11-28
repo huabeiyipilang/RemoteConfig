@@ -1,0 +1,187 @@
+{
+	"select_id": "231557_4",
+	"menu_scheme": "",
+	"show_video_manager": 1,
+	"show_menu": false,
+	"channel_list": [
+		{
+			"memorize_available": true,
+			"extension": {
+				"theme": {
+					"normal_color": "#333333"
+				},
+				"button_configs_right": [
+					{
+						"ext": "type:input",
+						"icon_dark": "https:\/\/h5.sinaimg.cn\/upload\/1010\/1352\/2020\/09\/22\/svideo_navigationbar_icon_search.png",
+						"scheme": "sinaweibo:\/\/searchall?type=402&containerid=231729",
+						"android_scheme": "sinaweibo:\/\/searchvideo",
+						"is_support_visitor": true,
+						"mold": 3,
+						"position": 1,
+						"act_code": 3275,
+						"version": 2,
+						"timeout": 300,
+						"exception_text": "请求超时了..."
+					}
+				],
+				"win_model": 1,
+				"button_configs_left": [
+					{
+						"icon_dark": "https:\/\/h5.sinaimg.cn\/upload\/1019\/115\/2020\/05\/29\/NavigationBar_Video_Icon_Live_Dark.png",
+						"scheme": "sinaweibo:\/\/livesquaretabbar?containerid=2310750001",
+						"icon": "https:\/\/h5.sinaimg.cn\/upload\/1019\/115\/2020\/05\/29\/NavigationBar_Video_Icon_Live_Normal.png",
+						"is_support_visitor": true,
+						"mold": 1,
+						"position": 1,
+						"act_code": 4675,
+						"version": 1,
+						"timeout": 3000,
+						"url": "http:\/\/api.weibo.cn\/2\/!\/multimedia\/video\/tab\/top_button_config",
+						"exception_text": "请求超时了..."
+					}
+				]
+			},
+			"scheme": "sinaweibo:\/\/cardlist?containerid=231557_4",
+			"autorefresh_interval": "30",
+			"sub_channels": [],
+			"name": "好友赞",
+			"default_add": "1",
+			"containerid": "231557_4",
+			"type": "tiny_friend_smallvideo",
+			"must_show": "0",
+			"actionlog": {
+				"act_code": "2523",
+				"fid": "231557_4"
+			}
+		},
+		{
+			"memorize_available": true,
+			"extension": {
+				"theme": {
+					"normal_color": "#333333"
+				},
+				"button_configs_right": [
+					{
+						"ext": "type:input",
+						"icon_dark": "https:\/\/h5.sinaimg.cn\/upload\/1010\/1352\/2020\/09\/22\/svideo_navigationbar_icon_search.png",
+						"scheme": "sinaweibo:\/\/searchall?type=402&containerid=231729",
+						"android_scheme": "sinaweibo:\/\/searchvideo",
+						"is_support_visitor": true,
+						"mold": 3,
+						"position": 1,
+						"act_code": 3275,
+						"version": 2,
+						"timeout": 300,
+						"exception_text": "请求超时了..."
+					}
+				],
+				"win_model": 1,
+				"button_configs_left": [
+					{
+						"icon_dark": "https:\/\/h5.sinaimg.cn\/upload\/1019\/115\/2020\/05\/29\/NavigationBar_Video_Icon_Live_Dark.png",
+						"scheme": "sinaweibo:\/\/livesquaretabbar?containerid=2310750001",
+						"icon": "https:\/\/h5.sinaimg.cn\/upload\/1019\/115\/2020\/05\/29\/NavigationBar_Video_Icon_Live_Normal.png",
+						"is_support_visitor": true,
+						"mold": 1,
+						"position": 1,
+						"act_code": 4675,
+						"version": 1,
+						"timeout": 3000,
+						"url": "http:\/\/api.weibo.cn\/2\/!\/multimedia\/video\/tab\/top_button_config",
+						"exception_text": "请求超时了..."
+					}
+				]
+			},
+			"scheme": "sinaweibo:\/\/cardlist?containerid=231557_4",
+			"autorefresh_interval": "30",
+			"sub_channels": [],
+			"name": "好友赞2",
+			"default_add": "1",
+			"containerid": "231557_4",
+			"type": "tiny_friend_smallvideo",
+			"must_show": "0",
+			"actionlog": {
+				"act_code": "2523",
+				"fid": "231557_4"
+			}
+		},
+		{
+			"memorize_available": true,
+			"extension": {
+				"theme": {
+					"normal_color": "#333333"
+				},
+				"button_configs_right": [
+					{
+						"ext": "type:input",
+						"icon_dark": "https:\/\/h5.sinaimg.cn\/upload\/1010\/1352\/2020\/09\/22\/svideo_navigationbar_icon_search.png",
+						"scheme": "sinaweibo:\/\/searchall?type=402&containerid=231729",
+						"android_scheme": "sinaweibo:\/\/searchvideo",
+						"is_support_visitor": true,
+						"mold": 3,
+						"position": 1,
+						"act_code": 3275,
+						"version": 2,
+						"timeout": 300,
+						"exception_text": "请求超时了..."
+					}
+				],
+				"win_model": 1,
+				"button_configs_left": [
+					{
+						"icon_dark": "https:\/\/h5.sinaimg.cn\/upload\/1019\/115\/2020\/05\/29\/NavigationBar_Video_Icon_Live_Dark.png",
+						"scheme": "sinaweibo:\/\/livesquaretabbar?containerid=2310750001",
+						"icon": "https:\/\/h5.sinaimg.cn\/upload\/1019\/115\/2020\/05\/29\/NavigationBar_Video_Icon_Live_Normal.png",
+						"is_support_visitor": true,
+						"mold": 1,
+						"position": 1,
+						"act_code": 4675,
+						"version": 1,
+						"timeout": 3000,
+						"url": "http:\/\/api.weibo.cn\/2\/!\/multimedia\/video\/tab\/top_button_config",
+						"exception_text": "请求超时了..."
+					}
+				]
+			},
+			"scheme": "sinaweibo:\/\/cardlist?containerid=231557_4",
+			"autorefresh_interval": "30",
+			"sub_channels": [],
+			"name": "好友赞3",
+			"default_add": "1",
+			"containerid": "231557_4",
+			"type": "tiny_friend_smallvideo",
+			"must_show": "0",
+			"actionlog": {
+				"act_code": "2523",
+				"fid": "231557_4"
+			}
+		}
+	],
+	"share_menu_list": [
+		{
+			"name": "刷新",
+			"type": "button_menus_refresh"
+		},
+		{
+			"name": "返回首页",
+			"type": "gohome",
+			"params": "\"scheme\": \"sinaweibo:\/\/gotohome\""
+		}
+	],
+	"button_configs": [
+		{
+			"icon_dark": "https:\/\/h5.sinaimg.cn\/upload\/1019\/115\/2020\/05\/29\/NavigationBar_Video_Icon_Live_Dark.png",
+			"scheme": "sinaweibo:\/\/livesquaretabbar?containerid=2310750001",
+			"icon": "https:\/\/h5.sinaimg.cn\/upload\/1019\/115\/2020\/05\/29\/NavigationBar_Video_Icon_Live_Normal.png",
+			"is_support_visitor": true,
+			"mold": 1,
+			"position": 1,
+			"act_code": 4675,
+			"version": 1,
+			"timeout": 3000,
+			"url": "http:\/\/api.weibo.cn\/2\/!\/multimedia\/video\/tab\/top_button_config",
+			"exception_text": "请求超时了..."
+		}
+	]
+}
