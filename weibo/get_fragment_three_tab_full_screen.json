@@ -3,6 +3,7 @@
 	"menu_scheme": "",
 	"show_video_manager": 1,
 	"show_menu": false,
+	"vchannel_enable":1,
 	"channel_list": [
 		{
 			"memorize_available": true,
