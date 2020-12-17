@@ -33,6 +33,11 @@
             "title":"视频管理页",
             "scheme":"sinaweibo://video/manage",
             "desc":""
+        },
+        {
+            "title":"视频标签",
+            "scheme":"sinaweibo://videotag?containerid=231643_4_4379156922732911",
+            "desc":""
         }
     ]
 }
