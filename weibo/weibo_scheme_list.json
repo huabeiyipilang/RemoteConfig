@@ -43,11 +43,6 @@
             "title":"热门&排行榜",
             "scheme":"sinaweibo://videohotlist?containerid=232374_1_4418213350415297",
             "desc":""
-        },
-        {
-            "title":"热门&排行榜 debug专用",
-            "scheme":"sinaweibo://videoplaylist?mid=4585649300315959&sceneid=profile_video_mblog",
-            "desc":""
         }
     ]
 }
