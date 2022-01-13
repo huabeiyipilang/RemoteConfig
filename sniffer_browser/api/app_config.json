@@ -1,0 +1,19 @@
+{
+    "home_page_urls":[
+        {
+            "name":"哔哩哔哩",
+            "icon":"",
+            "url":"https://m.bilibili.com"
+        },
+        {
+            "name":"微博",
+            "icon":"",
+            "url":"https://m.weibo.com"
+        },
+        {
+            "name":"twitter",
+            "icon":"",
+            "url":"https://m.twitter.com"
+        }
+    ]
+}
