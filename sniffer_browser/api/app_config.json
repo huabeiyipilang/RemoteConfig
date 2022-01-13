@@ -1,4 +1,8 @@
 {
+    "sniffer_js":{
+        "inject_js":"function sniffer(){let videoTags = document.getElementsByTagName(\"video\"); if(videoTags.length > 0){let url = videoTags[0].src; window.appInterface.onSnifferVideo(videoTags.length, url)}else{window.appInterface.onSnifferVideo(0, \"\")}}",
+        "sniffer_action":"sniffer();"
+    },
     "home_page_urls":[
         {
             "name":"哔哩哔哩",
