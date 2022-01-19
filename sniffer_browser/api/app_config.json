@@ -1,6 +1,6 @@
 {
   "sniffer_js": {
-    "inject_js": "function sniffer() {\n  let videoTags = document.getElementsByTagName(\"video\");\n  let urls = [];\n  if (videoTags.length > 0) {\n    for (var i = 0; i < videoTags.length; i++) {\n      let url = videoTags[i].src;\n      if (url != null && url.length > 0) {\n        urls.push(url);\n      }\n    }\n    window.appInterface.onSnifferVideo(videoTags.length, urls);\n  } else {\n    window.appInterface.onSnifferVideo(0, urls);\n  }\n}\n",
+    "inject_js": "function sniffer() {  let videoTags = document.getElementsByTagName(\"video\");  let urls = [];  console.log(\"video tags count:\" + videoTags.length);  if (videoTags.length > 0) {    for (var i = 0; i < videoTags.length; i++) {      let url = videoTags[i].src;      console.log(\"video tag:\" + url);      if (url != null && url.length > 0) {        urls.push(url);      }    }    window.appInterface.onSnifferVideo(videoTags.length, urls);  } else {    window.appInterface.onSnifferVideo(0, urls);  }}",
     "sniffer_action": "sniffer();"
   },
   "home_page_urls": [
