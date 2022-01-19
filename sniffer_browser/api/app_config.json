@@ -1,6 +1,6 @@
 {
   "sniffer_js": {
-    "inject_js": "function sniffer() {  let videoTags = document.getElementsByTagName("video");  let jsonObj = {    res_list: [],  };  console.log("video tags count:" + videoTags.length);  for (var i = 0; i < videoTags.length; i++) {    let url = videoTags[i].src;    console.log("video tag:" + url);    if (url != null && url.length > 0) {      let item = {        url: url,      };      jsonObj.res_list.push(item);    }  }  window.appInterface.onSnifferVideo(videoTags.length, jsonObj);  console.log(jsonObj);}",
+    "inject_js": "function sniffer() {  let videoTags = document.getElementsByTagName(\"video\");  let jsonObj = {    res_list: [],  };  console.log(\"video tags count:\" + videoTags.length);  for (var i = 0; i < videoTags.length; i++) {    let url = videoTags[i].src;    console.log(\"video tag:\" + url);    if (url != null && url.length > 0) {      let item = {        url: url,      };      jsonObj.res_list.push(item);    }  }  window.appInterface.onSnifferVideo(videoTags.length, jsonObj);  console.log(jsonObj);}",
     "sniffer_action": "sniffer();"
   },
   "home_page_urls": [
