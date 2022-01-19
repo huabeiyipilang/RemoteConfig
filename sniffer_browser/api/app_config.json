@@ -1,23 +1,20 @@
-{
-  "sniffer_js": {
-    "inject_js": "function sniffer() {  let videoTags = document.getElementsByTagName(\"video\");  let jsonObj = {    res_list: [],  };  console.log(\"video tags count:\" + videoTags.length);  for (var i = 0; i < videoTags.length; i++) {    let url = videoTags[i].src;    console.log(\"video tag:\" + url);    if (url != null && url.length > 0) {      let item = {        url: url,      };      jsonObj.res_list.push(item);    }  }  let respStr = JSON.stringify(jsonObj);  window.appInterface.onSnifferVideo(videoTags.length, respStr);  console.log(respStr);}",
-    "sniffer_action": "sniffer();"
-  },
-  "home_page_urls": [
-    {
-      "name": "哔哩哔哩",
-      "icon": "https://github.com/huabeiyipilang/RemoteConfig/raw/master/sniffer_browser/res/image/bilibili.png",
-      "url": "https://m.bilibili.com"
-    },
-    {
-      "name": "微博",
-      "icon": "https://github.com/huabeiyipilang/RemoteConfig/raw/master/sniffer_browser/res/image/weibo.png",
-      "url": "https://m.weibo.com"
-    },
-    {
-      "name": "twitter",
-      "icon": "https://github.com/huabeiyipilang/RemoteConfig/raw/master/sniffer_browser/res/image/Twitter.png",
-      "url": "https://m.twitter.com"
+function sniffer() {
+  let videoTags = document.getElementsByTagName("video");
+  let jsonObj = {
+    res_list: [],
+  };
+  console.log("video tags count:" + videoTags.length);
+  for (var i = 0; i < videoTags.length; i++) {
+    let url = videoTags[i].src;
+    console.log("video tag:" + url);
+    if (url != null && url.length > 0) {
+      let item = {
+        url: url,
+      };
+      jsonObj.res_list.push(item);
     }
-  ]
+  }
+  let respStr = JSON.stringify(jsonObj);
+  console.log(respStr);
+  window.appInterface.onSnifferVideo(videoTags.length, respStr);
 }
