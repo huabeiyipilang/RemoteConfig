@@ -1,23 +1,23 @@
 {
-    "sniffer_js":{
-        "inject_js":"function sniffer(){let videoTags = document.getElementsByTagName(\"video\"); if(videoTags.length > 0){let url = videoTags[0].src; window.appInterface.onSnifferVideo(videoTags.length, url)}else{window.appInterface.onSnifferVideo(0, \"\")}}",
-        "sniffer_action":"sniffer();"
+  "sniffer_js": {
+    "inject_js": "function sniffer() {\n  let videoTags = document.getElementsByTagName(\"video\");\n  let urls = [];\n  if (videoTags.length > 0) {\n    for (var i = 0; i < videoTags.length; i++) {\n      let url = videoTags[i].src;\n      if (url != null && url.length > 0) {\n        urls.push(url);\n      }\n    }\n    window.appInterface.onSnifferVideo(videoTags.length, urls);\n  } else {\n    window.appInterface.onSnifferVideo(0, urls);\n  }\n}\n",
+    "sniffer_action": "sniffer();"
+  },
+  "home_page_urls": [
+    {
+      "name": "哔哩哔哩",
+      "icon": "https://github.com/huabeiyipilang/RemoteConfig/raw/master/sniffer_browser/res/image/bilibili.png",
+      "url": "https://m.bilibili.com"
     },
-    "home_page_urls":[
-        {
-            "name":"哔哩哔哩",
-            "icon":"https://github.com/huabeiyipilang/RemoteConfig/raw/master/sniffer_browser/res/image/bilibili.png",
-            "url":"https://m.bilibili.com"
-        },
-        {
-            "name":"微博",
-            "icon":"https://github.com/huabeiyipilang/RemoteConfig/raw/master/sniffer_browser/res/image/weibo.png",
-            "url":"https://m.weibo.com"
-        },
-        {
-            "name":"twitter",
-            "icon":"https://github.com/huabeiyipilang/RemoteConfig/raw/master/sniffer_browser/res/image/Twitter.png",
-            "url":"https://m.twitter.com"
-        }
-    ]
+    {
+      "name": "微博",
+      "icon": "https://github.com/huabeiyipilang/RemoteConfig/raw/master/sniffer_browser/res/image/weibo.png",
+      "url": "https://m.weibo.com"
+    },
+    {
+      "name": "twitter",
+      "icon": "https://github.com/huabeiyipilang/RemoteConfig/raw/master/sniffer_browser/res/image/Twitter.png",
+      "url": "https://m.twitter.com"
+    }
+  ]
 }
