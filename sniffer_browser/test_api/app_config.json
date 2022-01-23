@@ -1,5 +1,5 @@
 {
-  "search_engine": "https://www.google.com/search?q=",
+  "search_engine": "https://m.baidu.com/s?wd=",
   "sniffer_js": {
     "inject_js": "function sniffer() {  let videoTags = document.getElementsByTagName(\"video\");  let jsonObj = {    res_list: [],  };  console.log(\"video tags count:\" + videoTags.length);  for (var i = 0; i < videoTags.length; i++) {    let url = videoTags[i].src;    console.log(\"video tag:\" + url);    if (url != null && url.length > 0) {      let item = {        url: url,      };      jsonObj.res_list.push(item);    }  }  let respStr = JSON.stringify(jsonObj);  console.log(respStr);  window.appInterface.onSnifferVideo(videoTags.length, respStr);}",
     "sniffer_action": "sniffer();"
