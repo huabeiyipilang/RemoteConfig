@@ -7,18 +7,23 @@
   "home_page_urls": [
     {
       "name": "Vimeo",
-      "icon": "https://gitee.com/huabeiyipilang/RemoteConfig/raw/master/sniffer_browser/res/image/vimeo.png",
+      "icon": "https://github.com/huabeiyipilang/RemoteConfig/raw/master/sniffer_browser/res/image/vimeo.png",
       "url": "https://vimeo.com"
     },
     {
-      "name": "Bilibili",
-      "icon": "https://gitee.com/huabeiyipilang/RemoteConfig/raw/master/sniffer_browser/res/image/bilibili.png",
+      "name": "哔哩哔哩",
+      "icon": "https://github.com/huabeiyipilang/RemoteConfig/raw/master/sniffer_browser/res/image/bilibili.png",
       "url": "https://m.bilibili.com"
     },
     {
-      "name": "Weibo",
-      "icon": "https://gitee.com/huabeiyipilang/RemoteConfig/raw/master/sniffer_browser/res/image/weibo.png",
+      "name": "微博",
+      "icon": "https://github.com/huabeiyipilang/RemoteConfig/raw/master/sniffer_browser/res/image/weibo.png",
       "url": "https://m.weibo.com"
+    },
+    {
+      "name": "twitter",
+      "icon": "https://github.com/huabeiyipilang/RemoteConfig/raw/master/sniffer_browser/res/image/Twitter.png",
+      "url": "https://m.twitter.com"
     }
   ]
 }
