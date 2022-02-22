@@ -1,24 +1,24 @@
 {
   "search_engine": "https://www.google.com/search?q=",
   "sniffer_js": {
-    "inject_js": "function sniffer() {  let videoTags = document.getElementsByTagName(\"video\");  let jsonObj = {    res_list: [],  };  console.log(\"video tags count:\" + videoTags.length);  for (var i = 0; i < videoTags.length; i++) {    let url = videoTags[i].src;    console.log(\"video tag:\" + url);    if (url != null && url.length > 0) {      let item = {        url: url,      };      jsonObj.res_list.push(item);    }  }  let respStr = JSON.stringify(jsonObj);  console.log(respStr);  window.appInterface.onSnifferVideo(videoTags.length, respStr);}",
-    "sniffer_action": "sniffer();"
+    "inject_js": "function sniffer(taskId) {  let url = window.location.href;  let snifferResult = {    url: url,    task_id: taskId,    res_list: [],  };  if (url.indexOf(\"vimeo.com\")) {    let videoId = url.substr(url.indexOf(\"vimeo.com/\") + 10, 9);    if (/^\\d+$/.test(videoId)) {      snifferVimeo(snifferResult, videoId);      return;    }  }  snifferVideoTag(snifferResult);}function snifferVimeo(snifferResult, videoId) {  var httpRequest = new XMLHttpRequest();  httpRequest.open(    \"GET\",    \"https://player.vimeo.com/video/\" + videoId + \"/config\",    true  );  httpRequest.send();  httpRequest.onreadystatechange = function () {    if (httpRequest.readyState == 4 && httpRequest.status == 200) {      var configStr = httpRequest.responseText;      var configObj = JSON.parse(configStr);      configObj.request.files.progressive.forEach((element) => {        let item = {          file_name: videoId + \"_\" + element.quality + \".mp4\",          url: element.url,          quality: element.quality,        };        snifferResult.res_list.push(item);      });      notifySnifferResult(snifferResult);    }  };}function snifferVideoTag(snifferResult) {  let videoTags = document.getElementsByTagName(\"video\");  console.log(\"video tags count:\" + videoTags.length);  for (var i = 0; i < videoTags.length; i++) {    let url = videoTags[i].src;    console.log(\"video tag:\" + url);    if (url != null && url.length > 0 && !url.startsWith(\"blob:\")) {      let item = {        url: url,      };      snifferResult.res_list.push(item);    }  }  notifySnifferResult(snifferResult);}function notifySnifferResult(snifferResult) {  let respStr = JSON.stringify(snifferResult);  console.log(respStr);  window.appInterface.onSnifferVideo(respStr);}",
+    "sniffer_action": "sniffer(%s);"
   },
   "home_page_urls": [
     {
-      "name": "哔哩哔哩",
-      "icon": "https://github.com/huabeiyipilang/RemoteConfig/raw/master/sniffer_browser/res/image/bilibili.png",
+      "name": "Vimeo",
+      "icon": "https://gitee.com/huabeiyipilang/RemoteConfig/raw/master/sniffer_browser/res/image/vimeo.png",
+      "url": "https://vimeo.com"
+    },
+    {
+      "name": "Bilibili",
+      "icon": "https://gitee.com/huabeiyipilang/RemoteConfig/raw/master/sniffer_browser/res/image/bilibili.png",
       "url": "https://m.bilibili.com"
     },
     {
-      "name": "微博",
-      "icon": "https://github.com/huabeiyipilang/RemoteConfig/raw/master/sniffer_browser/res/image/weibo.png",
+      "name": "Weibo",
+      "icon": "https://gitee.com/huabeiyipilang/RemoteConfig/raw/master/sniffer_browser/res/image/weibo.png",
       "url": "https://m.weibo.com"
-    },
-    {
-      "name": "twitter",
-      "icon": "https://github.com/huabeiyipilang/RemoteConfig/raw/master/sniffer_browser/res/image/Twitter.png",
-      "url": "https://m.twitter.com"
     }
   ]
 }
