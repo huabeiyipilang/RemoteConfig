@@ -49,17 +49,12 @@
       }
     ]
   },
-  "search_engine": "https://m.baidu.com/s?wd=",
+  "search_engine": "https://www.google.com/search?q=",
   "sniffer_js": {
     "inject_js": "function sniffer(taskId) {\n    let url = window.location.href;\n    let snifferResult = {\n        task_id: taskId,\n        url: url,\n        host: window.location.host,\n        res_list: [],\n    };\n\n    if (url.indexOf(\"vimeo.com\") >= 0) {\n        let videoId = url.substr(url.indexOf(\"vimeo.com/\") + 10, 9);\n        if (/^\\d+$/.test(videoId)) {\n            snifferBy1qvid(snifferResult, \"vimeo\", videoId);\n            return;\n        }\n    } else if (url.indexOf(\"dailymotion.com/video/\") >= 0) {\n        var keywords = \"dailymotion.com/video/\";\n        var index = url.indexOf(keywords) + keywords.length;\n        var videoId = url.substring(index, url.indexOf(\"?\") === -1 ? url.length : url.indexOf(\"?\"));\n        if (videoId.length == 7) {\n            snifferBy1qvid(snifferResult, \"dailymotion\", videoId);\n            return;\n        }\n    }\n    snifferVideoTag(snifferResult);\n}\n\nfunction snifferVimeo(snifferResult, videoId) {\n    snifferResult.strategy = \"video_tag\";\n    request(\"https://player.vimeo.com/video/\" + videoId + \"/config\", function (resp) {\n        try {\n            var configObj = JSON.parse(resp);\n            var videoResource = {\n                id: videoId,\n                definitions: []\n            }\n            configObj.request.files.progressive.forEach((element) => {\n                let item = {\n                    file_name: videoId + \"_\" + element.quality + \".mp4\",\n                    url: element.url,\n                    definition: element.quality,\n                    file_type: \"mp4\"\n                };\n                videoResource.definitions.push(item);\n            }\n            );\n            snifferResult.res_list.push(videoResource);\n        } catch (err) {\n            console.log(err.toString());\n        } finally {\n            notifySnifferResult(snifferResult);\n        }\n    });\n}\n\nfunction snifferVideoTag(snifferResult) {\n    snifferResult.strategy = \"video_tag\";\n    let videoTags = document.getElementsByTagName(\"video\");\n    console.log(\"video tags count:\" + videoTags.length);\n    for (var i = 0; i < videoTags.length; i++) {\n        let url = videoTags[i].src;\n        console.log(\"video tag:\" + url);\n        var date = new Date();\n        if (url != null && url.length > 0 && !url.startsWith(\"blob:\")) {\n            var fileType = \"mp4\";\n            let item = {\n                title: document.title,\n                definitions: [\n                    {\n                        file_type: fileType,\n                        url: url,\n                        file_name: date.getFullYear() + \"-\" + date.getMonth() + \"-\" + date.getDate() + \"-\" + date.getHours() + \"-\" + date.getMinutes() + \"-\" + date.getSeconds() + \".\" + fileType,\n                    }\n                ]\n            };\n            snifferResult.res_list.push(item);\n        }\n    }\n    notifySnifferResult(snifferResult);\n}\n\nfunction snifferBy1qvid(snifferResult, host, videoId) {\n    snifferResult.strategy = \"1qvid\";\n    request(\"https://api.1qvid.com/api/v1/videoInfo?videoId=\" + videoId + \"&host=\" + host, function (resp) {\n        try {\n            var configObj = JSON.parse(resp)[0];\n            var videoResource = {\n                id: videoId,\n                title: configObj.title,\n                duration_text: configObj.duration,\n                thumbnail: configObj.thumbnail,\n                definitions: []\n            }\n            configObj.formats.forEach((element) => {\n                let item = {\n                    file_name: host + \"_\" + videoId + \".mp4\",\n                    url: element.url,\n                    definition: element.formatNote,\n                    file_type: \"mp4\"\n                };\n                videoResource.definitions.push(item);\n            }\n            );\n            snifferResult.res_list.push(videoResource);\n        } catch (err) {\n            console.log(err.toString());\n        } finally {\n            notifySnifferResult(snifferResult);\n        }\n    });\n}\n\nfunction request(url, callback) {\n    console.log(\"request url : \" + url);\n    var requestId = encodeURIComponent(url);\n    console.log(\"respMap keys:\" + respMap.keys)\n    if (respMap.has(requestId)) {\n        console.log(\"requestId : \" + requestId + \"  has, not request\");\n        return;\n    }\n    console.log(\"add requestId:\" + requestId + \", url : \" + url + \", callback type:\" + typeof (callback));\n    respMap.set(requestId, callback);\n    window.appInterface.request(requestId, url);\n}\n\nvar respMap = new Map();\nfunction networkCallback(requestId, resp) {\n    console.log(\"resp requestId : \" + requestId);\n    resp = decodeURIComponent(resp);\n    var callback = respMap.get(requestId);\n    callback(resp);\n    respMap.delete(requestId)\n}\n\nfunction notifySnifferResult(snifferResult) {\n    let respStr = JSON.stringify(snifferResult);\n    console.log(respStr);\n    window.appInterface.onSnifferVideo(respStr);\n}",
     "sniffer_action": "sniffer(%s);"
   },
   "home_page_urls": [
-    {
-      "name": "Test",
-      "icon": "https://gitee.com/huabeiyipilang/RemoteConfig/raw/master/sniffer_browser/res/image/vimeo.png",
-      "url": "https://vimeo.com/683380297"
-    },
     {
       "name": "Vimeo",
       "icon": "https://gitee.com/huabeiyipilang/RemoteConfig/raw/master/sniffer_browser/res/image/vimeo.png",
@@ -67,23 +62,18 @@
     },
     {
       "name": "DailyMotion",
-      "icon": "https://gitee.com/huabeiyipilang/RemoteConfig/raw/master/sniffer_browser/res/image/bilibili.png",
+      "icon": "https://gitee.com/huabeiyipilang/RemoteConfig/raw/master/sniffer_browser/res/image/dailymotion.png",
       "url": "https://www.dailymotion.com/"
     },
     {
-      "name": "哔哩哔哩",
+      "name": "Bilibili",
       "icon": "https://gitee.com/huabeiyipilang/RemoteConfig/raw/master/sniffer_browser/res/image/bilibili.png",
       "url": "https://m.bilibili.com"
     },
     {
-      "name": "微博",
+      "name": "Weibo",
       "icon": "https://gitee.com/huabeiyipilang/RemoteConfig/raw/master/sniffer_browser/res/image/weibo.png",
       "url": "https://m.weibo.com"
-    },
-    {
-      "name": "twitter",
-      "icon": "https://gitee.com/huabeiyipilang/RemoteConfig/raw/master/sniffer_browser/res/image/Twitter.png",
-      "url": "https://m.twitter.com"
     }
   ]
 }
